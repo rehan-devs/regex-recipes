@@ -54,7 +54,9 @@ Real documentation that tells you the limitations, not just the happy path.
 
 ---
 
-## 🚀 Quick Start
+---
+
+## 🚀 Getting Started
 
 ```bash
 # Clone the repository
@@ -66,12 +68,42 @@ npm install
 
 # Start development server
 npm run dev
-📦 Build for ProductionBash# Create optimized production build
+```
+
+---
+
+## 📦 Build for Production
+
+```bash
+# Create optimized production build
 npm run build
 
 # Preview production build locally
 npm run preview
-The dist/ folder will contain your production-ready static files.🛠️ Tech StackTechnologyPurposeReact 18UI frameworkTypeScriptType safetyViteBuild tool & dev serverTailwind CSSUtility-first stylingZustandLightweight state managementReact Router v6Client-side routingLucide ReactIcon library📂 Project StructurePlaintextregex-recipes/
+```
+
+The `dist/` folder will contain your production-ready static files.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 | UI framework |
+| TypeScript | Type safety |
+| Vite | Build tool & dev server |
+| Tailwind CSS | Utility-first styling |
+| Zustand | Lightweight state management |
+| React Router v6 | Client-side routing |
+| Lucide React | Icon library |
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+regex-recipes/
 ├── public/
 │   └── favicon.svg
 ├── src/
@@ -90,7 +122,50 @@ The dist/ folder will contain your production-ready static files.🛠️ Tech St
 │       └── globals.css
 ├── package.json
 └── vite.config.ts
-🎨 Design PhilosophyWhat This Is NOT❌ Futuristic cyber/neon aesthetics❌ Excessive gradients and glassmorphism❌ Over-animated "tech bro" UI❌ Generic landing page templatesWhat This IS✅ Clean, purposeful design (Linear.app meets Stripe docs)✅ Proper whitespace and breathing room✅ Subtle shadows and micro-interactions✅ Design that gets out of the wayColor Palette:Light mode: Warm whites (#FAFAFA), soft grays, orange accent (#F97316)Dark mode: True darks (#0A0A0A), subtle borders (#262626)📚 Example RecipesRecipePatternUse CaseEmail Address[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}Standard validationURLhttps?://[^\s]+Extract HTTP/HTTPS linksHex Color#(?:[0-9a-fA-F]{3}){1,2}\bCSS color codesJWT TokeneyJ[A-Za-z0-9\-_]+\.eyJ[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_]+Security tokens🤝 ContributingContributions are welcome! Edit src/data/recipes.ts to add new recipes:TypeScript{
+```
+
+---
+
+## 🎨 Design Philosophy
+
+### What This Is NOT
+
+- ❌ Futuristic cyber/neon aesthetics
+- ❌ Excessive gradients and glassmorphism
+- ❌ Over-animated "tech bro" UI
+- ❌ Generic landing page templates
+
+### What This IS
+
+- ✅ Clean, purposeful design (Linear.app meets Stripe docs)
+- ✅ Proper whitespace and breathing room
+- ✅ Subtle shadows and micro-interactions
+- ✅ Design that gets out of the way
+
+**Color Palette:**
+
+- **Light mode:** Warm whites (`#FAFAFA`), soft grays, orange accent (`#F97316`)
+- **Dark mode:** True darks (`#0A0A0A`), subtle borders (`#262626`)
+
+---
+
+## 📚 Example Recipes
+
+| Recipe | Pattern | Use Case |
+|---|---|---|
+| Email Address | `[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}` | Standard validation |
+| URL | `https?://[^\s]+` | Extract HTTP/HTTPS links |
+| Hex Color | `#(?:[0-9a-fA-F]{3}){1,2}\b` | CSS color codes |
+| JWT Token | `eyJ[A-Za-z0-9\-_]+\.eyJ[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_]+` | Security tokens |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Edit `src/data/recipes.ts` to add new recipes:
+
+```typescript
+{
   slug: 'your-recipe-name',
   name: 'Display Name',
   icon: '📝',
@@ -98,4 +173,28 @@ The dist/ folder will contain your production-ready static files.🛠️ Tech St
   pattern: 'your-regex-pattern-here',
   // ... check recipes.ts for full schema
 }
-📧 ContactCreated by Rehan GitHub | Website⭐ If you find this useful, please star the repo!🗺️ Roadmap[ ] Generate from Examples – AI-powered pattern generation[ ] Export Options – Download recipes as JSON/YAML[ ] User Accounts – Save and sync favorite recipes[ ] Community Marketplace – User-submitted recipe gallery[ ] Browser Extension – Quick access from any tab[ ] VS Code Extension – Integration directly in your editor[ ] Regex Debugger – Step-through pattern visualization<br /><p align="center">Made with ❤️ and <b>regex</b></p>
+```
+
+---
+
+## 📧 Contact
+
+Created by **Rehan** — [GitHub](https://github.com/rehan-devs) | [Website](https://rehan.dev)
+
+⭐ **If you find this useful, please star the repo!**
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Generate from Examples – AI-powered pattern generation
+- [ ] Export Options – Download recipes as JSON/YAML
+- [ ] User Accounts – Save and sync favorite recipes
+- [ ] Community Marketplace – User-submitted recipe gallery
+- [ ] Browser Extension – Quick access from any tab
+- [ ] VS Code Extension – Integration directly in your editor
+- [ ] Regex Debugger – Step-through pattern visualization
+
+---
+
+<p align="center">Made with ❤️ and <b>regex</b></p>
