@@ -236,20 +236,20 @@ Website: https://rehandevs.vercel.app/
 
 ⭐ If you find this useful, please star the repo!
 
-🗺️ Roadmap
+## 🗺️ Roadmap
 
- Add "Generate from Examples" feature (AI-powered pattern generation)
- Export recipes as JSON/YAML
- User accounts to save favorite recipes
- Community-submitted recipe marketplace
- Browser extension for quick access
- VS Code extension
- More language snippets (Rust, Ruby, C#, etc.)
- Regex debugger with step-through visualization
- Performance benchmarking tool
- Unit test generator from patterns
+- [ ] **Generate from Examples** – AI-powered pattern generation
+- [ ] **Export Options** – Download recipes as JSON/YAML
+- [ ] **User Accounts** – Save and sync favorite recipes
+- [ ] **Community Marketplace** – User-submitted recipe gallery
+- [ ] **Browser Extension** – Quick access from any tab
+- [ ] **VS Code Extension** – Integration directly in your editor
+- [ ] **Expanded Snippets** – Support for Rust, Ruby, C#, etc.
+- [ ] **Regex Debugger** – Step-through pattern visualization
+- [ ] **Benchmarking** – Performance testing for complex patterns
+- [ ] **Unit Test Generator** – Create tests automatically from patterns
 
-<br />
+---
 
 <p align="center">
   Made with ❤️ and <b>regex</b>
