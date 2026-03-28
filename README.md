@@ -78,6 +78,7 @@ npm run preview
 The dist/ folder will contain your production-ready static files.
 
 🛠️ Tech Stack
+
 Technology	Purpose
 React 18	UI framework
 TypeScript	Type safety
@@ -146,7 +147,9 @@ Typography:
 
 UI text: Inter
 Code/patterns: JetBrains Mono
+
 🧩 How It Works
+
 Flow 1: Find a Recipe (Primary Use Case)
 Land on homepage → see categorized recipe grid
 Search or browse by category (Validation, Extraction, etc.)
@@ -246,4 +249,4 @@ Website: https://rehandevs.vercel.app/
  Performance benchmarking tool
  Unit test generator from patterns
 
-<p align="center">Made with ❤️ and regex</p> ```
+<p align="center">Made with ❤️ and regex</p>
