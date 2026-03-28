@@ -66,31 +66,12 @@ npm install
 
 # Start development server
 npm run dev
-
-📦 Build for Production
-
-# Create optimized production build
+📦 Build for ProductionBash# Create optimized production build
 npm run build
 
 # Preview production build locally
 npm run preview
-
-The dist/ folder will contain your production-ready static files.
-
-🛠️ Tech Stack
-
-Technology	Purpose
-React 18	UI framework
-TypeScript	Type safety
-Vite	Build tool & dev server
-Tailwind CSS	Utility-first styling
-Zustand	Lightweight state management
-React Router v6	Client-side routing
-Lucide React	Icon library
-
-📂 Project Structure
-
-regex-recipes/
+The dist/ folder will contain your production-ready static files.🛠️ Tech StackTechnologyPurposeReact 18UI frameworkTypeScriptType safetyViteBuild tool & dev serverTailwind CSSUtility-first stylingZustandLightweight state managementReact Router v6Client-side routingLucide ReactIcon library📂 Project StructurePlaintextregex-recipes/
 ├── public/
 │   └── favicon.svg
 ├── src/
@@ -100,157 +81,21 @@ regex-recipes/
 │   │   ├── recipes/         # Recipe grid, detail, search
 │   │   ├── playground/      # Pattern tester components
 │   │   └── snippets/        # Code block display
-│   ├── pages/
-│   │   ├── RecipesPage.tsx
-│   │   ├── RecipeDetailPage.tsx
-│   │   └── PlaygroundPage.tsx
+│   ├── pages/               # Page-level components
 │   ├── data/
 │   │   └── recipes.ts       # All 30+ regex recipes
-│   ├── stores/
-│   │   ├── regexStore.ts    # Pattern matching state
-│   │   ├── themeStore.ts    # Light/dark mode
-│   │   └── historyStore.ts  # Local history
-│   ├── utils/
-│   │   └── regexExplainer.ts # Pattern tokenizer
-│   ├── hooks/
-│   │   └── useDebounce.ts
-│   ├── types/
-│   │   └── index.ts
+│   ├── stores/              # Zustand state stores
+│   ├── utils/               # Logic & Pattern tokenizer
 │   └── styles/
 │       └── globals.css
-├── index.html
 ├── package.json
-├── tailwind.config.js
-├── tsconfig.json
 └── vite.config.ts
-
-🎨 Design Philosophy
-
-What This Is NOT
-❌ Futuristic cyber/neon aesthetics
-❌ Excessive gradients and glassmorphism
-❌ Over-animated "tech bro" UI
-❌ Generic landing page templates
-
-What This IS
-✅ Clean, purposeful design (Linear.app meets Stripe docs)
-✅ Proper whitespace and breathing room
-✅ Subtle shadows and micro-interactions
-✅ Design that gets out of the way and lets the tool shine
-
-Color Palette:
-
-Light mode: Warm whites (#FAFAFA), soft grays, orange accent (#F97316)
-Dark mode: True darks (#0A0A0A), subtle borders (#262626)
-One accent color used sparingly for CTAs and highlights
-Typography:
-
-UI text: Inter
-Code/patterns: JetBrains Mono
-
-🧩 How It Works
-
-Flow 1: Find a Recipe (Primary Use Case)
-Land on homepage → see categorized recipe grid
-Search or browse by category (Validation, Extraction, etc.)
-Click a recipe → pattern auto-fills with sample data
-See live matches, explanation, and edge cases
-Copy pattern or code snippet in your language
-Flow 2: Test Your Own Pattern
-Click "Playground" tab
-Enter your regex pattern
-Paste test string
-See matches highlighted in real-time
-Get pattern explanation and share URL
-Flow 3: Modify a Recipe
-Start from any recipe
-Edit the pattern or test string
-See results update live
-Copy modified version
-
-📚 Example Recipes
-
-Recipe	Pattern	Use Case
-Email Address	[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}	Validate standard emails
-URL	https?://[^\s]+	Extract HTTP/HTTPS links
-Phone (US)	\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}	Match US phone formats
-Hex Color	#(?:[0-9a-fA-F]{3}){1,2}\b	CSS color codes
-IPv4	`\b(?:(?:25[0-5]	2[0-4]\d
-Date (ISO)	`\d{4}-(?:0[1-9]	1[0-2])-(?:0[1-9]
-Markdown Links	\[([^\]]+)\]\(([^)]+)\)	Parse [text](url) syntax
-JWT Token	eyJ[A-Za-z0-9\-_]+\.eyJ[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_]+	Security tokens
-And 22+ more...
-
-🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-Add new recipes - Submit patterns for common use cases
-Improve explanations - Make token explanations clearer
-Fix bugs - Report issues or submit PRs
-Add features - Suggest improvements
-
-Adding a New Recipe
-Edit src/data/recipes.ts and add your recipe following this structure:
-
-TypeScript
-
-{
+🎨 Design PhilosophyWhat This Is NOT❌ Futuristic cyber/neon aesthetics❌ Excessive gradients and glassmorphism❌ Over-animated "tech bro" UI❌ Generic landing page templatesWhat This IS✅ Clean, purposeful design (Linear.app meets Stripe docs)✅ Proper whitespace and breathing room✅ Subtle shadows and micro-interactions✅ Design that gets out of the wayColor Palette:Light mode: Warm whites (#FAFAFA), soft grays, orange accent (#F97316)Dark mode: True darks (#0A0A0A), subtle borders (#262626)📚 Example RecipesRecipePatternUse CaseEmail Address[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}Standard validationURLhttps?://[^\s]+Extract HTTP/HTTPS linksHex Color#(?:[0-9a-fA-F]{3}){1,2}\bCSS color codesJWT TokeneyJ[A-Za-z0-9\-_]+\.eyJ[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_]+Security tokens🤝 ContributingContributions are welcome! Edit src/data/recipes.ts to add new recipes:TypeScript{
   slug: 'your-recipe-name',
   name: 'Display Name',
   icon: '📝',
-  category: 'validation', // or extraction, formatting, parsing, security
-  description: 'Short one-line description',
+  category: 'validation',
   pattern: 'your-regex-pattern-here',
-  defaultFlags: 'g',
-  sampleTestString: 'Sample text with examples\nThat should match',
-  edgeCases: [
-    { input: 'valid-input', shouldMatch: true, explanation: 'Why it matches' },
-    { input: 'invalid', shouldMatch: false, explanation: 'Why it fails' },
-  ],
-  codeSnippets: {
-    javascript: '/* your JS code */',
-    python: '# your Python code',
-    go: '// your Go code',
-    php: '<?php /* your PHP code */',
-    java: '// your Java code',
-  },
-  tags: ['keyword1', 'keyword2'],
-  difficulty: 'beginner', // or intermediate, advanced
+  // ... check recipes.ts for full schema
 }
-
-📝 License
-MIT License - feel free to use this project for anything.
-
-🙏 Acknowledgments
-Inspired by the simplicity of regex101 but designed for use-case-first learning
-Color palette inspired by Linear.app and Stripe documentation
-Built with modern web technologies for performance and accessibility
-
-📧 Contact
-
-Created by Rehan
-
-GitHub: @rehan-devs
-Website: https://rehandevs.vercel.app/
-
-⭐ If you find this useful, please star the repo!
-
-## 🗺️ Roadmap
-
-- [ ] **Generate from Examples** – AI-powered pattern generation
-- [ ] **Export Options** – Download recipes as JSON/YAML
-- [ ] **User Accounts** – Save and sync favorite recipes
-- [ ] **Community Marketplace** – User-submitted recipe gallery
-- [ ] **Browser Extension** – Quick access from any tab
-- [ ] **VS Code Extension** – Integration directly in your editor
-- [ ] **Expanded Snippets** – Support for Rust, Ruby, C#, etc.
-- [ ] **Regex Debugger** – Step-through pattern visualization
-- [ ] **Benchmarking** – Performance testing for complex patterns
-- [ ] **Unit Test Generator** – Create tests automatically from patterns
-
----
-
-<p align="center">
-  Made with ❤️ and <b>regex</b>
-</p>
+📧 ContactCreated by Rehan GitHub | Website⭐ If you find this useful, please star the repo!🗺️ Roadmap[ ] Generate from Examples – AI-powered pattern generation[ ] Export Options – Download recipes as JSON/YAML[ ] User Accounts – Save and sync favorite recipes[ ] Community Marketplace – User-submitted recipe gallery[ ] Browser Extension – Quick access from any tab[ ] VS Code Extension – Integration directly in your editor[ ] Regex Debugger – Step-through pattern visualization<br /><p align="center">Made with ❤️ and <b>regex</b></p>
