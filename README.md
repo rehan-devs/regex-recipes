@@ -169,9 +169,24 @@ Contributions are welcome! Edit `src/data/recipes.ts` to add new recipes:
   slug: 'your-recipe-name',
   name: 'Display Name',
   icon: '📝',
-  category: 'validation',
+  category: 'validation', // or extraction, formatting, parsing, security
+  description: 'Short one-line description',
   pattern: 'your-regex-pattern-here',
-  // ... check recipes.ts for full schema
+  defaultFlags: 'g',
+  sampleTestString: 'Sample text with examples\nThat should match',
+  edgeCases: [
+    { input: 'valid-input', shouldMatch: true, explanation: 'Why it matches' },
+    { input: 'invalid', shouldMatch: false, explanation: 'Why it fails' },
+  ],
+  codeSnippets: {
+    javascript: '/* your JS code */',
+    python: '# your Python code',
+    go: '// your Go code',
+    php: '<?php /* your PHP code */',
+    java: '// your Java code',
+  },
+  tags: ['keyword1', 'keyword2'],
+  difficulty: 'beginner', // or intermediate, advanced
 }
 ```
 
@@ -179,7 +194,7 @@ Contributions are welcome! Edit `src/data/recipes.ts` to add new recipes:
 
 ## 📧 Contact
 
-Created by **Rehan** — [GitHub](https://github.com/rehan-devs) | [Website](https://rehan.dev)
+Created by **Rehan** — [GitHub](https://github.com/rehan-devs) | [Website](https://rehandevs.vercel.app/)
 
 ⭐ **If you find this useful, please star the repo!**
 
