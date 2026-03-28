@@ -249,4 +249,8 @@ Website: https://rehandevs.vercel.app/
  Performance benchmarking tool
  Unit test generator from patterns
 
-<p align="center">Made with ❤️ and regex</p>
+<br />
+
+<p align="center">
+  Made with ❤️ and <b>regex</b>
+</p>
